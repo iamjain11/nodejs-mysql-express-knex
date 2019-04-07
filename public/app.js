@@ -4,8 +4,11 @@ CreateUser.addEventListener('submit', (e) => {
     const username = CreateUser.querySelector('.username').value
     const password = CreateUser.querySelector('.password').value
     post('/createUser', { username, password }).then(({ status }) => {
-        if (status === 200) alert('user created successfully')
-        else alert('create user failed')
+        if (status === 200) {
+            CreateUser.querySelector('.username').value = '';
+            CreateUser.querySelector('.password').value = '';
+            alert('user created successfully')
+        } else alert('create user failed')
     })
 });
 
@@ -14,11 +17,13 @@ Login.addEventListener('submit', (e) => {
     e.preventDefault()
     const username = Login.querySelector('.username').value
     const password = Login.querySelector('.password').value
-    post('/login', { username, password })
-        .then(({ status }) => {
-            if (status === 200) alert('login success')
-            else alert('login failed')
-        })
+    post('/login', { username, password }).then(({ status }) => {
+        if (status === 200) {
+            alert('login success');
+            Login.querySelector('.username').value = '';
+            Login.querySelector('.password').value = '';
+        } else alert('login failed')
+    })
 });
 
 function post(path, data) {
