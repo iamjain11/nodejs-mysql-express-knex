@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-mysql-express-knex",
+  "version": "1.0.0",
+  "description": "nodejs express mysql-db rest api server with knex",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjain11/nodejs-mysql-express-knex.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "ExpressJs",
+    "Mysql",
+    "Knex"
+  ],
+  "author": "Vivek Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamjain11/nodejs-mysql-express-knex/issues"
+  },
+  "homepage": "https://github.com/iamjain11/nodejs-mysql-express-knex#readme",
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "mysql": "^2.16.0"
+  }
+}
